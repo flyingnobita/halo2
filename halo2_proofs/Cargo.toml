@@ -53,7 +53,11 @@ rayon = "1.5.1"
 crossbeam = "0.8"
 ff = "0.12"
 group = "0.12"
-halo2curves = { path = "../arithmetic/curves" }
+# halo2curves = { path = "../arithmetic/curves" }
+# Use below before Axiom's PR is merged
+halo2curves = { git = "https://github.com/flyingnobita/halo2curves.git", branch = "bls12-381/dev" }
+# Use below for local development
+# halo2curves = { path = "../../flyingnobita-halo2curves" }
 rand = "0.8"
 rand_core = { version = "0.6", default-features = false}
 tracing = "0.1"
@@ -61,6 +65,7 @@ blake2b_simd = "1"
 rustc-hash = "1.1.0"
 sha3 = "0.9.1"
 ark-std = { version = "0.3.0", features = ["print-trace"], optional = true }
+rand_chacha = "0.3.1"
 
 # Developer tooling dependencies
 plotters = { version = "0.3.0", optional = true }
